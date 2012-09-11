@@ -17,8 +17,11 @@
 # limitations under the License.
 #
 
-gem_package "i18n"
-gem_package "bluepill"
+%w(i18n bluepill).each do |gp|
+  gem_package gp do
+    gem_binary node["bluepill"]["gem_binary"]
+  end
+end
 
 [
   node["bluepill"]["conf_dir"],
