@@ -17,9 +17,11 @@
 # limitations under the License.
 #
 
+include_recipe "bluepill::ruby_1_9_2"
+
 %w(i18n bluepill).each do |gp|
-  gem_package gp do
-    gem_binary node["bluepill"]["gem_binary"]
+  rbenv_gem gp do
+    ruby_version node["bluepill"]["ruby_1_9_2_version"]
   end
 end
 

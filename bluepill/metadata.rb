@@ -5,3 +5,4 @@ description      "Installs bluepill gem and configures to manage services, inclu
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "1.0.2"
 recipe "bluepill::default", "Installs bluepill rubygem and set up management directories"
+depends          "rbenv"

@@ -20,7 +20,7 @@ default["bluepill"]["logfile"] = "/var/log/bluepill.log"
 default["bluepill"]["pid_dir"] = "/var/run/bluepill"
 default["bluepill"]["state_dir"] = "/var/lib/bluepill"
 default["bluepill"]["group"] = "0"
-default["bluepill"]["gem_binary"] = node[:languages][:ruby][:gem_bin]
+default["bluepill"]["ruby_1_9_2_version"] = "1.9.2-p290"
 
 case platform
 when "arch"
